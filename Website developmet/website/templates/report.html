@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+
+{% block title %}Sentiment Analysis Report{% endblock %} 
+
+{% block content %}
+    <h1>Sentiment Analysis Report</h1>
+    <h2>Product Name: {{ product_name }}</h2>
+    <h3>Number of Positive Reviews: {{ positive_reviews }}</h3>
+    <h3>Number of Negative Reviews: {{ negative_reviews }}</h3>
+    <h3>Number of Neutral Reviews: {{ neutral_reviews }}</h3>
+{% endblock %}
