@@ -1,0 +1,83 @@
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #ff7f00; /* Bright orange background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #FF8901;
+    border-radius: 4px;
+}
+
+/* Logo Styling */
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Menu Icon Styling */
+.navbar .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #ff7f00; /* Match navbar background */
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    z-index: 999;
+}
+
+/* Sidebar Icons */
+.sidebar .icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff7f00;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .icon:hover {
+    background-color: #ffe0b3; /* Light orange hover effect */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    margin-left: 80px; /* Offset for the sidebar */
+    padding-top: 70px; /* Offset for the navbar */
+    padding: 1rem;
+}

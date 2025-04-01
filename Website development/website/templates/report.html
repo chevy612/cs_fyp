@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+
+{% block title %}Sentiment Analysis Report{% endblock %} 
+
+{% block content %}
+<!-- templates/report.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Report</title>
+    <!-- Include ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!--Include Plotly.js-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" type="text/css" href="../static/report.css">
+</head>
+<body>
+    <h1>Sentiment Analysis Report of {{ product_name }}</h1>
+
+    <!-- Sentiment Bar -->
+    <h2>Sentiment Bar</h2>
+    <div id="sentimentBarChart" style="width: 100%; height: 100px;"></div>
+    <div id="sentimentBarData" style="display:none;">{{ bar_data | safe}}</div>
+
+    <!-- Quarterly Sentiment Graph -->
+    <h2>Sentiment Over Time</h2>
+    <div id="quarterlySentimentChart" style="width: 100%; height: 400px;"></div>
+    <div id="quarterlySentimentData" style="display:none;">{{quarterly_data | safe}}</div>
+
+
+    <!-- Top Words -->
+    <h2>Top Words</h2>
+    <div id="topWordsData" style="display:none;">{{top_words_data | safe}}</div>
+
+
+    <script src="{{ url_for('static', filename='report.js') }}"></script>
+
+</body>
+
+</html>
+{% endblock %}

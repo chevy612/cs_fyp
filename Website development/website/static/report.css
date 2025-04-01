@@ -1,0 +1,41 @@
+.sentiment-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.sentiment-bar {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 25px;
+    transition: width 0.3s ease-in-out;
+}
+.positive {background-color: #4CAF50;}
+.neutral {background-color: #939494;}
+.negative {background-color: #f44336;}
+
+.top-words-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 50px;
+    flex-direction: row;
+}
+
+.top-word-item {
+    display: flex;
+    background-color: #eb9e2af6;
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin: 20px;
+    font-size: 14px;
+    color: #333;
+}
